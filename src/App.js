@@ -10,9 +10,9 @@ class App extends Component  {
     super(props)
     this.state = {
       stateWork:[
-        {name:"a", sorc:"../img/a7.jpg"},
-        {name:"b", sorc:"../img/a7.jpg"},
-        {name:"b", sorc:"../img/a7.jpg"},
+        {numb:0, sorc:"../img/a7.jpg"},
+        {numb:1, sorc:"../img/a7.jpg"},
+        {numb:2, sorc:"../img/a7.jpg"},
       ],
       copyStateWork:[],
     };

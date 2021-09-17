@@ -4,13 +4,14 @@ class Clock extends Component {
     constructor(props){
         super(props);
     this.state = {
-        date: new Date().toLocaleTimeString(),
-        // date: new Date(1,2,3,6,6,6).toLocaleTimeString(),
+        //date: new Date(), Modificare el tiempo para que sea estatico
+        date: new Date(2012, 11, 20, 11, 0, 0),//con .
         isday:false,
         time : [
-            {open: "6:06:06",img:"a"},
-            {open: "11:59:59",img:"b"},
-            {open: "3:59:59", img:"c"}
+            //{open: "6:00:00",img:"a"}, //am
+            {name:"open",inf: new Date(0, 0, 0, 6, 0, 0).toLocaleTimeString()}, //am
+            {name:"close",inf: new Date(0, 0, 0, 11, 0, 0).toLocaleTimeString()}, //am
+            {name:"break",inf: new Date(0, 0, 0, 15, 0, 0).toLocaleTimeString()}     //1 pm
         ],
     };
     this.checkState = this.checkState.bind(this);
@@ -20,23 +21,26 @@ class Clock extends Component {
     componentDidMount(){
         this.getMeridiem();
         this.checkState();
+        setInterval(() => this.checkState(),1000);
         //this.timerID = setInterval(() => this.tick(),1000);
     };
 
     tick() {
         this.setState({date: new Date()});
-        this.checkState();
+        //this.checkState();
     };
    
-    checkState(){
-        let {isday,date,time} = this.state;
-        for (let i = 0; i < time.length; i++) {
-            if (date === time[i].open && isday) {
-                this.props.getOneState.bind(this, time[i].img)()        
+    checkState() {
+        let {date,time} = this.state;
+        // comparar las horas programadas con el tiempo actual
+        time.map((task,index,array)=>{
+            if (date.toLocaleTimeString() === task.inf) {
+                this.props.getOneState(index);
             }
+            return 
         }
-        //console.log("Open",Time.open);
-        //if (new Date().toLocaleTimeString() === Time) {}
+        )
+        
     }
 
     getMeridiem(){
@@ -49,8 +53,7 @@ class Clock extends Component {
     render(){
         return(
             <div>
-                <h2>It is {this.state.date}</h2>
-                {/* <h2>It is {this.state.date.toLocaleTimeString()}</h2> */}
+                <h2>It is {this.state.date.toLocaleTimeString('en-US')}</h2>
                 {/* <button onClick={}>NO NO NO NO!</button> */}
             </div>
 
