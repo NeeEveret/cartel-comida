@@ -11,8 +11,8 @@ class App extends Component  {
     this.state = {
       stateWork:[
         {numb:0, sorc:"../img/a7.jpg"},
-        {numb:1, sorc:"../img/a7.jpg"},
-        {numb:2, sorc:"../img/a7.jpg"},
+        {numb:1, sorc:"../img/b7.jpg"},
+        {numb:2, sorc:"../img/c7.jpg"},
       ],
       copyStateWork:[],
     };
@@ -30,9 +30,7 @@ class App extends Component  {
     return (
       <div className="App">
           <Menu/>
-          <Poster 
-            copyState={this.state.copyStateWork}
-            />
+          <Poster copyState={this.state.copyStateWork}/>
           <List/>
           <Footer/>
       </div>

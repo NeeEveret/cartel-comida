@@ -5,7 +5,7 @@ class MyState extends Component {
         super(props)
         this.state = {
             workstate : [],
-            now:"aaa",
+            now:"",
             //aqui las imagenes
         };
         //this.getOneState = this.getOneState.bind(this);
@@ -20,15 +20,16 @@ class MyState extends Component {
     };
 
     getOneState = (i)=>{
-        console.log();
+        console.log(i);
         let info = [];
+        console.log(info);
         this.state.workstate.map((e)=> info.push(e.sorc));
         this.setState(
             ({now : info[i]})
         )
     }
     render(){
-        //console.log(ber.map(material => console.log(material.image)));
+        //console.l2og(ber.map(material => console.log(material.image)));
         return(
             <div>
                 <img alt={this.props.de} src={this.state.now}/>
