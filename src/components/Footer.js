@@ -5,7 +5,17 @@ export default class Footer extends Component{
         return(
             <div>
                 Footer manin pie de lo que sea
-                
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
+                Footer manin pie de lo que sea
             </div>
         )
     }
