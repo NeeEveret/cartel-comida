@@ -8,6 +8,21 @@ export default class TheTime extends Component {
                 <p>Este componente se eliminara porque solo necesito una zona donde poner
                      imagen
                 </p>
+                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>                <p>Este componente se eliminara porque solo necesito una zona donde poner
+                     imagen
+                </p>
             </div>
         )
     }
